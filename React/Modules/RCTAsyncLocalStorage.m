@@ -74,7 +74,7 @@ static NSString *RCTGetStorageDirectory()
 #if TARGET_OS_TV
     storageDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
 #else
-    storageDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    storageDirectory = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES).firstObject;
 #endif
     storageDirectory = [storageDirectory stringByAppendingPathComponent:RCTStorageDirectory];
   });
